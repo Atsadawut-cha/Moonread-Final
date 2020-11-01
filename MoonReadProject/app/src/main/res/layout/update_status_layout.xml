@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:background="@color/navy"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="แก้ไชสถานะคำสั่งซื้อ"/>
+
+    <RadioGroup
+        android:layout_marginTop="15dp"
+        android:id="@+id/changeStatus_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <RadioButton
+            android:id="@+id/ordered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ordered"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="delivery"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="done"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="แก้ไขสถานะ"
+        android:textSize="20sp"
+        android:background="#66F6"
+        />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ยกเลิก"
+        android:textSize="20sp"
+        android:background="#FC3C71"
+        />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"
+        android:layout_marginTop="150dp"
+        />
+    <EditText
+        android:id="@+id/usr_name"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Username"
+        android:background="@drawable/edtset1"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:inputType="textShortMessage"
+        android:layout_gravity="center_horizontal"
+        />
+    <EditText
+        android:id="@+id/usr_password"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Password"
+        android:background="@drawable/edtset1"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:inputType="numberPassword"
+        android:layout_gravity="center_horizontal"
+        />
+    <EditText
+        android:id="@+id/usr_conpassword"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Confirm Password"
+        android:background="@drawable/edtset1"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:inputType="numberPassword"
+        android:layout_gravity="center_horizontal"
+        />
+    <EditText
+        android:id="@+id/usr_tel"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Tel"
+        android:background="@drawable/edtset1"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:inputType="phone"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Register"
+        android:onClick="addCustomer"
+        android:padding="10dp"
+        android:background="@drawable/edtset1"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+
+
+</LinearLayout>

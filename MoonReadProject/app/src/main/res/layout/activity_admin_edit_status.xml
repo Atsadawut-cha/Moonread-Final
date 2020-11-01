@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D9D9D9"
+    android:padding="5dp"
+    tools:context=".AdminEditStatusActivity">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="#1F275B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="คำสั่งซื้อ"/>
+
+
+    <LinearLayout
+        android:background="#CCFFCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="หมายเลขสั่งซื้อ:"
+        android:textStyle="bold"
+        android:textColor="#1F275B"
+        android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/ad_order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="OrderID"
+            android:textStyle="bold"
+            android:textColor="@color/navy"
+            android:layout_marginBottom="5dp"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="5dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/ad_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#CCFFCC"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCFFCC"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="สถานะคำสั่งซื้อ: "
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:id="@+id/ad_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:text="Status"
+            android:textColor="@color/navy"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="#CCFFCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="ที่อยู่จัดส่ง: "
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:id="@+id/ad_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:text="address"
+            android:textColor="@color/navy"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#CCFFCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="การชำระเงิน: "
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:id="@+id/ad_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:text="paymet"
+            android:textColor="@color/navy"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#CCFFCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="วิธีจัดส่ง: "
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:id="@+id/ad_deli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:text="Delivery"
+            android:textColor="@color/navy"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#CCFFCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="วันที่สั่งซื้อ: "
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:id="@+id/ad_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:text="Date"
+            android:textColor="@color/navy"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="#CCFFCC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="ราคารวม "
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:id="@+id/ad_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:text="total"
+            android:textColor="@color/navy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="บาท"
+            android:textColor="@color/navy"/>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCFFCC">
+        <Button
+            android:padding="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1F275B"
+            android:text="แก้ไขสถานะคำสั่งซื้อ"
+            android:textColor="#fff"
+            android:onClick="changeStaus"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

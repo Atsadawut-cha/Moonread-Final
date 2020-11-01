@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditDeleteOrderDetailActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@color/navy"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="แก้ไขรายการสินค้า"/>
+
+    <TextView
+        android:id="@+id/ordDetailID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="orderDetail_ID"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/ordID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="orderID"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/BookID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BookID"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/TXBookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/navy"
+        android:text="test"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TXBookPrice"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:text="test"
+            android:textColor="@color/navy"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/navy"
+            android:text="บาท"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginLeft="188dp"
+            android:padding="2dp"
+            android:onClick="negQTY"
+            android:text="-"/>
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:padding="2dp"
+            android:onClick="plusQTY"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/btn_update_orderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:background="#66F6"
+        android:onClick="updateOrderDetail"
+        android:text="แก้ไขรายการสินค้า"/>
+
+    <Button
+        android:id="@+id/btn_delete_orderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:background="#FC3C71"
+        android:onClick="deleteOrderDetail"
+        android:text="ลบรายการสินค้า"
+        />
+
+
+
+</LinearLayout>

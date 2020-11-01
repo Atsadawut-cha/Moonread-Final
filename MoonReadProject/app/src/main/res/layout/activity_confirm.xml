@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D9D9D9"
+    tools:context=".ConfirmActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:layout_marginLeft="6dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รายการสินค้า"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:textColor="#1F275B"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/White"
+            android:layout_marginTop="5dp"
+            android:id="@+id/recycler_view_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="horizontal" />
+
+        <TableLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:text="ที่อยู่"
+                    android:textColor="#1F275B"
+                    android:gravity="center"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/edt_Address"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fff"
+                    android:padding="5dp"
+                    android:textSize="20dp" />
+
+            </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="วัน/เดือน/ปี"
+                    android:padding="5dp"
+                    android:textSize="20dp"
+                    android:inputType="text"
+                    android:textColor="#1F275B"/>
+
+                <EditText
+                    android:id="@+id/edt_Date"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fff"
+                    android:hint="dd/mm/yyyy"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="20dp" />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:text="วิธีชำระ"
+            android:textColor="#1F275B"
+            android:textSize="20dp"/>
+        <RadioGroup
+            android:id="@+id/Payment_radioGroup"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="เก็บเงินปลายทาง"
+                android:textColor="#1F275B"
+                android:textSize="20sp" />
+            <RadioButton
+                android:id="@+id/bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="โอนผ่านธนาคาร"
+                android:textColor="#1F275B"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:textColor="#1F275B"
+                android:text="บัตรเครดิต"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:text="วิธีจัดส่ง"
+            android:textColor="#1F275B"
+            android:textSize="20dp"/>
+
+
+            <RadioGroup
+                android:id="@+id/Delivery_radioGroup"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                    <RadioButton
+                        android:id="@+id/Register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="ลงทะเบียน                               +30  บาท"
+                        android:textColor="#1F275B"
+                        android:onClick="regis"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/EMS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="EMS                                         +50  บาท"
+                        android:textColor="#1F275B"
+                        android:onClick="ems"
+                        android:textSize="20sp" />
+
+            </RadioGroup>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="ราคารวม"
+                    android:textColor="#1F275B"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="test"
+                    android:textColor="#1F275B"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="บาท"
+                    android:textColor="#1F275B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:background="#1F275B"
+        android:text="ยืนยันการสั่งซื้อ"
+        android:textColor="#fff"
+        android:onClick="submitOrder"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/button_nav"
+        app:itemIconTint="@color/White"
+        app:itemTextColor="@color/White"
+        app:itemBackground="@color/navy"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+
+</LinearLayout>

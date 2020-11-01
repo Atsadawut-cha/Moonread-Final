@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"
+        android:layout_marginTop="180dp"
+        />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Username"
+        android:background="@drawable/edtset1"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:inputType="textShortMessage"
+        android:layout_gravity="center_horizontal"
+        />
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edtset1"
+        android:padding="10dp"
+        android:hint="Password"
+        android:gravity="center"
+        android:inputType="numberPassword"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:text="Login"
+        android:onClick="login"
+        android:padding="10dp"
+        android:background="@drawable/edtset1"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:text="Register"
+        android:textColor="#ffffff"
+        />
+
+</LinearLayout>
